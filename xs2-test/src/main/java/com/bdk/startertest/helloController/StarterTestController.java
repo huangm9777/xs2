@@ -1,4 +1,4 @@
-package com.bdk.startertest.controller;
+package com.bdk.startertest.helloController;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

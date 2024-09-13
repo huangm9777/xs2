@@ -4,8 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>xs2-test</module>
         <module>xs2-pojo</module>
+        <module>xs2-utils</module>
+        <module>xs2-test</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,9 +37,13 @@
         <!--        dependencies version -->
         <lombok.version>1.18.30</lombok.version>
         <mysql.version>5.1.46</mysql.version>
-        <mybatis.version>3.5.16</mybatis.version>
-        <mybatis.spring.version>3.0.3</mybatis.spring.version>
-        <mybatis.plus.version>3.5.5</mybatis.plus.version>
+        <mybatis.version>3.5.1</mybatis.version>
+        <mybatis.spring.version>2.0.1</mybatis.spring.version>
+        <mybatis.plus.version>3.4.1</mybatis.plus.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <jjwt-api.version>0.11.5</jjwt-api.version>
+        <jjwt-impl.version>0.11.5</jjwt-impl.version>
+        <jjwt-jackson.version>0.11.5</jjwt-jackson.version>
     </properties>
     <dependencies>
         <dependency>
@@ -69,6 +74,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
+        <!--        mybatis-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
@@ -79,6 +85,29 @@
             <artifactId>mybatis-spring</artifactId>
             <version>${mybatis.spring.version}</version>
         </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jjwt-impl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson, jjwt-jackson is required for JSON parsing -->
+            <version>${jjwt-jackson.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
