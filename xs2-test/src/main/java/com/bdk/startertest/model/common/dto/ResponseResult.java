@@ -1,8 +1,8 @@
-package com.bdk.common.dto;
+package com.bdk.startertest.model.common.dto;
 
 
 import com.alibaba.fastjson.JSON;
-import com.bdk.common.enums.AppHttpCodeEnum;
+import com.bdk.startertest.model.common.enums.AppHttpCodeEnum;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -2,13 +2,14 @@ package com.bdk.startertest.user.serivce.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.bdk.common.AppJwtUtil;
-import com.bdk.common.dto.ResponseResult;
-import com.bdk.common.enums.AppHttpCodeEnum;
+
+import com.bdk.startertest.model.common.dto.ResponseResult;
+import com.bdk.startertest.model.common.enums.AppHttpCodeEnum;
 import com.bdk.startertest.user.serivce.UserService;
-import com.bdk.user.dto.UserAuthDTO;
-import com.bdk.user.entity.User;
+import com.bdk.startertest.model.user.dto.UserAuthDTO;
+import com.bdk.startertest.model.user.entity.User;
 import com.bdk.startertest.user.mapper.UserMapper;
+import com.bdk.startertest.utils.AppJwtUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 

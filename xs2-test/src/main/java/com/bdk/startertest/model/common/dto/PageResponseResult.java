@@ -1,4 +1,4 @@
-package com.bdk.common.dto;
+package com.bdk.startertest.model.common.dto;
 
 import java.io.Serializable;
 

@@ -1,8 +1,8 @@
 package com.bdk.startertest.user.controller;
 
-import com.bdk.common.dto.ResponseResult;
+import com.bdk.startertest.model.common.dto.ResponseResult;
 import com.bdk.startertest.user.serivce.UserService;
-import com.bdk.user.dto.UserAuthDTO;
+import com.bdk.startertest.model.user.dto.UserAuthDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,4 +1,4 @@
-package com.bdk.common.enums;
+package com.bdk.startertest.model.common.enums;
 
 public enum AppHttpCodeEnum {
 

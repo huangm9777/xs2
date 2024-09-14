@@ -1,9 +1,11 @@
 server:
-  port: 8081
+  port: ${server.port:8081}
 spring:
+  profiles:
+    active: prod
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://35.232.149.11:3306/xs2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=PST
+    url: jdbc:mysql://${bdk.datasource.host}/xs2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=PST
     username: root
     password: 123
 

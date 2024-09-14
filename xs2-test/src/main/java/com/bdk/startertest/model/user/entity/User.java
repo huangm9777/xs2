@@ -1,4 +1,4 @@
-package com.bdk.user.entity;
+package com.bdk.startertest.model.user.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

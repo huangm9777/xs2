@@ -1,4 +1,4 @@
-package com.bdk.user.dto;
+package com.bdk.startertest.model.user.dto;
 
 import lombok.Data;
 

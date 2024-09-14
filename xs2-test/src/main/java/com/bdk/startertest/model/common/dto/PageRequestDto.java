@@ -1,4 +1,4 @@
-package com.bdk.common.dto;
+package com.bdk.startertest.model.common.dto;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

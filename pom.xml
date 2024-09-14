@@ -2,38 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>xs2-pojo</module>
-        <module>xs2-utils</module>
-        <module>xs2-test</module>
-    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.12</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.bdk</groupId>
     <artifactId>xs2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xs2</name>
-    <description>xs2</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+    <packaging>pom</packaging>
+    <modules>
+
+        <module>xs2-test</module>
+    </modules>
+
     <properties>
-        <java.version>22</java.version>
+        <java.version>11</java.version>
         <!--        dependencies version -->
         <lombok.version>1.18.30</lombok.version>
         <mysql.version>5.1.46</mysql.version>
@@ -46,16 +32,23 @@
         <jjwt-jackson.version>0.11.5</jjwt-jackson.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--internal dependency-->
+<!--        <dependency>-->
+<!--            <groupId>com.bdk</groupId>-->
+<!--            <artifactId>xs2-pojo</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.bdk</groupId>-->
+<!--            <artifactId>xs2-utils</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -116,19 +109,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>3.4.3</version>
-                <configuration>
-                    <to>
-                        <image>gcr.io/silicon-coder-435422-n8/hello-mvn</image>
-                    </to>
-                    <container>
-                        <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
-                    </container>
-                </configuration>
-            </plugin>
+
         </plugins>
     </build>
 

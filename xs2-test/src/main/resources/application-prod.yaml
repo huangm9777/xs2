@@ -1,9 +1,10 @@
 server:
   port: 8080
-spring:
+
+
+bdk:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/xs2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=PST
+    host: localhost
     username: root
     password: 123
 

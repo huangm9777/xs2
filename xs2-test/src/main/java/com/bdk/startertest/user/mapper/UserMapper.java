@@ -1,7 +1,7 @@
 package com.bdk.startertest.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.bdk.user.entity.User;
+import com.bdk.startertest.model.user.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

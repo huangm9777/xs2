@@ -1,4 +1,4 @@
-package com.bdk.common;
+package com.bdk.startertest.utils;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
