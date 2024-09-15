@@ -12,9 +12,12 @@ public class MediaController {
 
     private final MediaService mediaService;
 
+    /**
+     * list all new, for test purpose
+     * @return
+     */
     @GetMapping("/media/listAll")
     public ResponseResult listAll(){
         return mediaService.listAll();
-
     }
 }
