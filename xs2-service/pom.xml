@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>xs2-media</module>
+        <module>xs2-user</module>
     </modules>
 
     <dependencies>
