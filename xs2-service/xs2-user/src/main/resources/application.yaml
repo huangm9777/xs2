@@ -1,9 +1,0 @@
-server:
-  port: 51801
-
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://35.232.149.11:3306/xs2_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=America/Los_Angeles
-    username: root
-    password: 123

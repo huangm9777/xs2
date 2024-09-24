@@ -1,15 +1,18 @@
-package com.bdk.service.impl;
+package com.bdk.user.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bdk.common.utils.AppJwtUtil;
-import com.bdk.mapper.UserMapper;
+
+import com.bdk.common.utils.ThreadUtil;
 import com.bdk.model.common.dto.ResponseResult;
 import com.bdk.model.common.enums.AppHttpCodeEnum;
 import com.bdk.model.user.dto.LoginDto;
 import com.bdk.model.user.pojo.ApUser;
-import com.bdk.service.UserService;
+
+import com.bdk.user.mapper.UserMapper;
+import com.bdk.user.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
@@ -52,9 +55,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, ApUser> implements 
             dbUser.setPassword("");
             map.put("user",dbUser);
 
-
-
-
             return ResponseResult.okResult(map);
         }else {
                 Map<String,Object> map = new HashMap<>();
@@ -64,4 +64,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, ApUser> implements 
                 return ResponseResult.okResult(map);
         }
     }
+
+    @Override
+    public ResponseResult userProfile() {
+        Integer userId = ThreadUtil.getCurrentId();
+        if (userId == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.NEED_LOGIN);
+        }
+        ApUser apUser = lambdaQuery().eq(ApUser::getId, userId).one();
+        apUser.setPassword("***");
+        apUser.setSalt("***");
+
+        return ResponseResult.okResult(apUser);
+    }
+
+
 }

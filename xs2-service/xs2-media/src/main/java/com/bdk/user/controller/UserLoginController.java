@@ -1,9 +1,9 @@
-package com.bdk.controller;
+package com.bdk.user.controller;
 
 import com.bdk.model.common.dto.ResponseResult;
-import com.bdk.model.common.enums.AppHttpCodeEnum;
 import com.bdk.model.user.dto.LoginDto;
-import com.bdk.service.UserService;
+
+import com.bdk.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,15 +16,6 @@ public class UserLoginController {
     private final UserService userService;
 
     /**
-     * test
-     * @return
-     */
-    @CrossOrigin
-    @PostMapping("/prof")
-    public String test(){
-        return "hello";
-    }
-    /**
      * user login
      * @param dto
      * @return
@@ -32,6 +23,17 @@ public class UserLoginController {
     @PostMapping("/login")
     public ResponseResult login(@RequestBody LoginDto dto){
         return userService.login(dto);
+
     }
+
+    /**
+     * retrieve user info
+     * @return
+     */
+    @GetMapping("/profile")
+    public ResponseResult userProfile(){
+        return userService.userProfile();
+    }
+
 
 }

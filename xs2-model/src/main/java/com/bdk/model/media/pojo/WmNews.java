@@ -23,8 +23,8 @@ public class WmNews implements Serializable {
     * 主键
     */
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId(value = "id",type = IdType.ID_WORKER)
+    private Long id;
     /**
     * 自媒体用户ID
     */
@@ -33,71 +33,105 @@ public class WmNews implements Serializable {
     /**
     * 标题
     */
+    private String  title;
 
-    private String title;
+    private Integer authorId;
     /**
-    * 图文内容
-    */
+     *
+     */
 
-    private String content;
+    private String authorName;
     /**
-    * 文章布局
-            0 无图文章
-            1 单图文章
-            3 多图文章
-    */
+     *
+     */
 
-    private Integer type;
-    /**
-    * 图文频道ID
-    */
-
-    @TableField("channel_id")
     private Integer channelId;
     /**
-    * 
-    */
+     *
+     */
 
-    private String labels;
+    private String channelName;
     /**
-    * 创建时间
-    */
+     *
+     */
 
-    @TableField("created_time")
-    private Date createdTime;
+    private Integer layout;
     /**
-    * 提交时间
-    */
+     *
+     */
 
-    @TableField("submited_time")
-    private Date submitedTime;
+    private Integer flag;
     /**
-    * 当前状态
-            0 草稿
-            1 提交（待审核）
-            2 审核失败
-            3 人工审核
-            4 人工审核通过
-            8 审核通过（待发布）
-            9 已发布
-    */
-
-    private Integer status;
-
-    /**
-    * 拒绝理由
-    */
-
-    private String reason;
-    /**
-    * //图片用逗号分隔
-    */
+     *
+     */
 
     private String images;
     /**
-    * 
-    */
+     *
+     */
 
-    private Integer enable;
+    private String labels;
+    /**
+     *
+     */
+
+    private Integer likes;
+    /**
+     *
+     */
+
+    private Integer collection;
+    /**
+     *
+     */
+
+    private Integer comment;
+    /**
+     *
+     */
+
+    private Integer views;
+    /**
+     *
+     */
+
+    private Integer provinceId;
+    /**
+     *
+     */
+
+    private Integer cityId;
+    /**
+     *
+     */
+
+    private Integer countyId;
+    /**
+     *
+     */
+
+    private Date createdTime;
+    /**
+     *
+     */
+
+    private Date publishTime;
+    /**
+     *
+     */
+
+    private Integer syncStatus;
+    /**
+     *
+     */
+
+    private Integer origin;
+    /**
+     *
+     */
+
+    private String staticUrl;
+
+    private String content;
 
 }
