@@ -4,6 +4,15 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://35.232.149.11:3306/xs2_media?useUnicode=true&characterEncoding=UTF-8&serverTimezone=America/Los_Angeles
+    url: jdbc:mysql://localhost:3307/xs2_media?useUnicode=true&characterEncoding=UTF-8&serverTimezone=America/Los_Angeles
     username: root
-    password: 123
+    password: 123456
+
+bdk:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: xs2
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
