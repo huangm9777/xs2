@@ -98,7 +98,6 @@ public class MediaServiceImpl extends ServiceImpl<MediaMapper, WmNews> implement
 
 
 
-
         return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
     }
 
