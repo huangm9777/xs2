@@ -32,11 +32,11 @@ public class JwtAuthInterceptor implements HandlerInterceptor {
         if (request.getRequestURI().contains("/login")){
             return true;
         }
-        //3.获取token
-        String token = request.getHeader("Authorization");
-        token = token.substring(token.indexOf(" ")+1);
         // 校验令牌
         try {
+            //3.获取token
+            String token = request.getHeader("Authorization");
+            token = token.substring(token.indexOf(" ")+1);
 
             Claims claimsBody = AppJwtUtil.getClaimsBody(token);
 

@@ -2,11 +2,18 @@ server:
   port: 51802
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3307/xs2_media?useUnicode=true&characterEncoding=UTF-8&serverTimezone=America/Los_Angeles
+#    url: jdbc:mysql://mysql8:3306/xs2_media?useUnicode=true&characterEncoding=UTF-8&serverTimezone=America/Los_Angeles
     username: root
+#    password: 123
     password: 123456
+
+
 
 bdk:
   jwt:
@@ -16,3 +23,10 @@ bdk:
     admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+
+
+  alioss:
+    access-key-id: LTAI5tSJw4UjuXWZcw7niAPU
+    access-key-secret: Dju5M7nIdH9OqQeWAqHwQVK0pJz2sx
+    bucket-name: web-app-touareg
+    endpoint: oss-us-west-1.aliyuncs.com

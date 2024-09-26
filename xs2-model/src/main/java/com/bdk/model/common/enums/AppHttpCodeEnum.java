@@ -18,6 +18,7 @@ public enum AppHttpCodeEnum {
     SIG_TIMEOUT(101,"SIGN已过期"),
     // 参数错误 500~1000
     PARAM_REQUIRE(500,"缺少参数"),
+    UPLOAD_FAILED(501,"文件上传失败"),
     PARAM_INVALID(501,"无效参数"),
     ARTICLE_ID_NOT_EXIST(501,"文章Id不可缺少"),
     IMAGE_RELATED_TO_ARTICLE(501,"文件删除失败"),

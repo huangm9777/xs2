@@ -92,7 +92,7 @@ public class MediaServiceImpl extends ServiceImpl<MediaMapper, WmNews> implement
         wmNews.setAuthorName("admin");
         wmNews.setCreatedTime(new Date());
         wmNews.setPublishTime(new Date());
-        wmNews.setLayout(0);
+
 
         save(wmNews);
 
